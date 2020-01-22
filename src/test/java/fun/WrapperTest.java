@@ -15,4 +15,14 @@ public class WrapperTest {
         assertEquals("wo\nrd", Wrapper.wrap("word", 2));
         assertEquals("kit\nten", Wrapper.wrap("kitten", 3));
     }
+
+    @Test
+    public void testWrapLongWordIntoManyRows() {
+        assertEquals("abc\ndef\nghi\nj", Wrapper.wrap("abcdefghij", 3));
+    }
+
+    @Test
+    public void testWordBoundary() {
+        assertEquals("word\nword", Wrapper.wrap("word word", 5));
+    }
 }
