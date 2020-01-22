@@ -2,9 +2,11 @@ package fun;
 
 public class Wrapper {
     public static String wrap(String words, int columnLength) {
-        if (words.length() < columnLength)
-            return words;
+        String result = "";
+
+        if (words.length() <= columnLength)
+            return result = words;
         else
-            return "wo\nrd";
+            return result = words.substring(0, columnLength) + "\n" + words.substring(columnLength);
     }
 }

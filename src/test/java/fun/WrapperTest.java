@@ -13,5 +13,6 @@ public class WrapperTest {
     @Test
     public void testWrapWithColumnSmallerThanWord() {
         assertEquals("wo\nrd", Wrapper.wrap("word", 2));
+        assertEquals("kit\nten", Wrapper.wrap("kitten", 3));
     }
 }
